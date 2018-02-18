@@ -1,0 +1,28 @@
+{
+  "name": "babel-lab",
+  "version": "1.0.0",
+  "description": "A test of Babel js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register",
+    "start": "npx nodemon ./src/index.js --exec babel-node --watch ./src",
+    "build": "npx babel src -d dist",
+    "serve": "node dist/index.js",
+    "babel": "npx babel ./src/index.js --out-file ./dist/index.js",
+    "watch": "npx babel --watch ./src --out-dir ./dist"
+  },
+  "author": "Brainux",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "mocha": "^5.0.1",
+    "nodemon": "^1.15.0"
+  }
+}

@@ -1,0 +1,15 @@
+import http from 'http';
+import assert from 'assert';
+
+//inicia a aplicação
+import app from '../src/index.js';
+app();
+
+describe('Example Node Server', () => {
+  it('should return 200', done => {
+    http.get('http://127.0.0.1:1337', res => {
+      assert.equal(200, res.statusCode);
+      done();
+    });
+  });
+});
